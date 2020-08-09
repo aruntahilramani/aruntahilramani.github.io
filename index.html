@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script src="signup.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -61,33 +61,45 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="/signup" method="POST">
+          <form action="" onsubmit="return validate()">
+            
             <div class="form-group">
               <label for="uname">Username</label>
-              <input type="text" name="uname" class="form-control" id="uname" placeholder="Choose your Username" required>
+              <input type="text" name="uname" class="form-control" id="uname" placeholder="Choose your Username">
+              <label id="erruname" style="color: red;visibility: hidden;">Please enter your Username</label>
             </div>
+
             <div class="form-group">
               <label for="fname">Firstname</label>
-              <input type="text" name="fname" class="form-control" id="fname" placeholder="Enter your Firstname" required>
+              <input type="text" name="fname" class="form-control" id="fname" placeholder="Enter your Firstname">
+              <label id="errfname" style="color: red;visibility: hidden;">Please enter your First Name</label>
             </div>
+
             <div class="form-group">
               <label for="lname">Lastname</label>
-              <input type="text" name="lname" class="form-control" id="lname" placeholder="Enter your Lastname" required>
+              <input type="text" name="lname" class="form-control" id="lname" placeholder="Enter your Lastname">
+              <label id="errlname" style="color: red;visibility: hidden;">Please enter your Last Name</label>
             </div>
+
             <div class="form-group">
               <label for="email">Email address</label>
-              <input type="email" name="email" class="form-control" id="email" placeholder="Enter your Email" required>
+              <input type="email" name="email" class="form-control" id="email" placeholder="Enter your Email" >
+              <label id="erremail" style="color: red;visibility: hidden;">Please enter your Email</label>
             </div>
+
             <div class="form-group">
               <label for="pass1">Password</label>
-              <input type="password" name="pass1" class="form-control" id="pass1" placeholder="Choose your Password" required>
+              <input type="password" name="pass1" class="form-control" id="pass1" placeholder="Choose your Password">
+              <label id="errpass" style="color: red;visibility: hidden;">Please enter your Password</label>
             </div>
+
             <div class="form-group">
               <label for="pass2">Confirm Password</label>
-              <input type="password" name="pass2" class="form-control" id="pass2" placeholder="Confirm your Password" required>
+              <input type="password" name="pass2" class="form-control" id="pass2" placeholder="Confirm your Password">
+              <label id="errrepass" style="color: red;visibility: hidden;">Please Confirm Your Password</label>
             </div>
             
-          <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+          <input type="submit" name="submit" value="Submit" class="btn btn-primary">
           </form>
         </div>
         <div class="modal-footer">
@@ -170,30 +182,57 @@
 
 <br>
 <div class="container">
-    <!--Slideshow starts here -->
-    
-    <h3 class="my-5">Medical Devices</h5>
-    <div class="row">
-        <div class="container carousel-inner no-padding">
-                <div class="carousel-item active">
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-ld-4">
-                        <div class="card align-items-center" style="width: 18rem;">
-                            <img src='pictures/oxy1000b_2.png' class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title" id="#">Fingertip Pulse Oximeter – Oxygize</h5>
-                                <p class="card-text">The fingertip pulse oximeter by Oxygize is manufactured according to the FDA and CE standards. It is specially designed for sports enthusias</p>
-                                <h6 class="card-title" >Price: <span id="pricepr{{i.id}}">2,499</span></h6>
-                                <span id="divpr{{i.id}}" class="divpr">
-                                 <a href="addtocart.html"><button id="#" class="btn btn-primary">Add to Cart</button></a>
-                                </span>
-                                <a href="quickview.html"><button id="#" class="btn btn-primary">QuickView</button></a>
-                            </div>
-                        </div>
-					</div>
-                </div>
-		    </div>
+  <h3>Medical Devices</h3>
+  <div class="row">
+        
+    <div class="col-md-3 col-sm-6 col-xs-6">
+        <img src='pictures/oxy1000b_2.png' class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="#">Fingertip Pulse Oximeter – Oxygize</h5>
+          <h6 class="card-title">Price: <span id="pricepr{{i.id}}">2,499</span></h6>
+          <div>
+            <a href="#" class="add-cart cart1"><button id="#" class="btn btn-primary my-sm-0">Add to Cart</button></a>
+            <a href="quickview.html"><button id="#" class="btn btn-primary my-sm-0">QuickView</button></a>
+          </div>
+      </div>
     </div>
- </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
+      <img src='https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/p/o/power_wheelchair_zip_lite_-_vissco_2974.webp' class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="#">Power Wheelchair Zip Lite - Vissco</h5>
+        <h6 class="card-title">Price: <span id="pricepr{{i.id}}">5,000</span></h6>
+        <div>
+          <a href="indexcart.html" class="add-cart cart2"><button id="#" class="btn btn-primary my-sm-0">Add to Cart</button></a>
+          <a href="quickview.html"><button id="#" class="btn btn-primary my-sm-0">QuickView</button></a>
+        </div>
+        
+    </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
+      <img src='https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/m/c/mcp_jindal_economy_ms_coating_foldable_walker_sen468-mcp-j-10_1_.webp' class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="#">Foldable Walker - MCP Lite Visco</h5>
+        <h6 class="card-title">Price: <span id="pricepr{{i.id}}">899</span></h6>
+        <div>
+          <a href="indexcart.html" class="add-cart cart3"><button id="#" class="btn btn-primary my-sm-0">Add to Cart</button></a>
+          <a href="quickview.html"><button id="#" class="btn btn-primary my-sm-0">QuickView</button></a>
+        </div>
+    
+    </div>
+    </div><div class="col-md-3 col-sm-6 col-xs-6">
+      <img src='https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/s/a/sahyog_wellness_automatic_wrist_digital_sen500-a2012_2_.webp' class="card-img-top" alt="...">
+      <div class="card-body">`
+        <h5 class="card-title" id="#">Blood Pressure Monitor</h5>
+        <h6 class="card-title">Price: <span id="pricepr{{i.id}}">2,099</span></h6>
+        <div>
+          <a href="indexcart.html" class="add-cart cart4"><button id="#" class="btn btn-primary my-sm-0">Add to Cart</button></a>
+          <a href="quickview.html"><button id="#" class="btn btn-primary my-sm-0">QuickView</button></a>
+        </div>
+    
+    </div>
+    </div>
+  </div>
+</div>
 
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
