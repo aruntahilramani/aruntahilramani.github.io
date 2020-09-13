@@ -268,7 +268,7 @@ a.remove {
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   font-weight: bold;
-  background: #e0e0e0;
+  background: #f69679;
   padding: .5em;
   font-size: .75em;
   display: inline-block;
@@ -280,9 +280,7 @@ a.remove {
   -o-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
-a.remove:hover {
-  background: #f30;
-}
+
 
 .promoCode {
   border: 2px solid #efefef;
