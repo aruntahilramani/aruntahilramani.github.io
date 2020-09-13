@@ -1,4 +1,4 @@
-$('.removeWrap').on('click touchstart', function()  {
+$('a.removeWrap').on('click touchstart', function()  {
     event.preventDefault();
     $(this).parent().parent().parent().hide(400);
 
