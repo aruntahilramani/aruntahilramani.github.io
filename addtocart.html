@@ -4,7 +4,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 
+  
+  
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -131,98 +135,137 @@
 
 
 <section class="cart_area">
-  <div class="container">
-    <div class="cart_inner">
-      <div class="table-responsive">
-	  <br>
-        <table class="table" border="1px" cellpadding="10px" cellspacing="10px">
-          <thead>
-            <tr>
-              <th scope="col">Product</th>
-              <th scope="col">Price (Rs)</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Total</th>
-              <th scope="col">Delete</th>
-            </tr>
-          </thead>
+  <div class="wrap cf">
+    <div class="heading cf">
+      <h1>My Cart</h1>
+      <a href="#" class="continue">Continue Shopping</a>
+    </div>
+    <div class="cart">
+      <!--    <ul class="tableHead">
+      <li class="prodHeader">Product</li>
+      <li>Quantity</li>
+      <li>Total</li>
+       <li>Remove</li>
+    </ul>-->
+      <ul class="cartWrap">
+        <li class="items odd">
 
-          <tbody>
-            <tr>
-              <td>
-                <div class="media">
-                  <div class="d-flex">
-                    <img
-                      src="pictures/oxy1000b_2.png"
-                      alt=""
-                      height="100"
-                      width="150"
-                    />
-                  </div>
-                  <div class="media-body">
-                    <p>Fingertip Pulse Oximeter – Oxygize</p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <h5 id="single-unit">2,499</h5>
-              </td>
-              <td>
-                <input type="number" value="1" name="qty">
-              </td>
-              <td>
-                <h5 id="total">2,499</h5>
-              </td>
-              <td><a href="#" role="button" class="btn btn-primary">Remove</a></td>
-            </tr>
+          <div class="infoWrap">
+            <div class="cartSection">
+
+              <img src="pictures/oxy1000b_2.png" alt="" class="itemImg" />
+              <p class="itemNumber">#QUE-007544-002</p>
+              <h3>Fingertip Pulse Oximeter – Oxygize</h3>
+
+              <p> <input type="text" name="qty" class="qty" placeholder="1" /> x 2,499 Rs/-</p>
+
+              <p class="stockStatus"> In Stock</p>
+            </div>
 
 
-            <tr>
-              <td></td>
+            <div class="prodTotal cartSection">
+              <p>2,499 Rs/-</p>
+            </div>
+            <div class="cartSection removeWrap">
+              <a href="#" class="remove">X</a>
+            </div>
+          </div>>
+        </li>
+        <li class="items even">
 
-              <td></td>
+          <div class="infoWrap">
+            <div class="cartSection">
 
-              <td></td>
+              <img src="https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/p/o/power_wheelchair_zip_lite_-_vissco_2974.webp" alt="" class="itemImg" />
+              <p class="itemNumber">#QUE-007544-003</p>
+              <h3>Power Wheelchair Zip Lite - Vissco</h3>
 
-              <td>
-                <h5>Subtotal (Rs)</h5>
-              </td>
+              <p> <input type="text" name="qty" class="qty" placeholder="1" /> x 5,000 Rs/-</p>
 
-              <td>
-                <h5>2,499</h5>
-              </td>
-            </tr>
+              <p class="stockStatus"> In Stock</p>
+            </div>
 
-            <tr class="shipping_area">
-              <td></td>
 
-              <td></td>
+            <div class="prodTotal cartSection">
+              <p>5,000 Rs/-</p>
+            </div>
+            <div class="cartSection removeWrap">
+              <a href="#" class="remove">X</a>
+            </div>
+          </div>
+        </li>
 
-              <td></td>
+        <li class="items odd">
+          <div class="infoWrap">
+            <div class="cartSection">
 
-              <td></td>
-              <td>
-                 <div class="checkout_btn_inner">
-                  <center>
-				  <a role="button" class="btn btn-primary" href="index.html">Continue Shopping</a><br> <br>
-                  <a  role="button" class="btn btn-primary" href="checkout.html">Proceed to checkout</a>
-				  </center>
-				</div>
-				
-              </td>
-            </tr>
+              <img src="https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/m/c/mcp_jindal_economy_ms_coating_foldable_walker_sen468-mcp-j-10_1_.webp" alt="" class="itemImg" />
+              <p class="itemNumber">#QUE-007544-004</p>
+              <h3>Foldable Walker - MCP Lite Visco</h3>
 
-            <tr class="out_button_area">
-              <td></td>
+              <p> <input type="text" class="qty" placeholder="1" /> x 899 Rs/-</p>
 
-              <td></td>
-				<td></td>
-             
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              <p class="stockStatus out"> Out of Stock</p>
+            </div>
+
+
+            <div class="prodTotal cartSection">
+              <p>899 Rs/-</p>
+            </div>
+            <div class="cartSection removeWrap">
+              <a href="#" class="remove">x</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="items even">
+          <div class="infoWrap">
+            <div class="cartSection info">
+
+              <img src="https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/s/a/sahyog_wellness_automatic_wrist_digital_sen500-a2012_2_.webp" alt="" class="itemImg" />
+              <p class="itemNumber">#QUE-007544-004</p>
+              <h3>Omron Blood Pressure Monitor</h3>
+
+              <p> <input type="text" class="qty" placeholder="1" /> x 2,099 Rs/-</p>
+
+              <p class="stockStatus"> In Stock</p>
+
+            </div>
+
+
+            <div class="prodTotal cartSection">
+              <p>2,099 Rs/-</p>
+            </div>
+
+            <div class="cartSection removeWrap">
+              <a href="#" class="remove">x</a>
+            </div>
+          </div>
+          <div class="special">
+            <div class="specialContent">Free gift with purchase!, gift wrap, etc!!</div>
+          </div>
+        </li>
+
+
+        <!--<li class="items even">Item 2</li>-->
+
+      </ul>
+    </div>
+
+    <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo"
+        placholder="Enter Code" />
+      <a href="#" class="btn1"></a></div>
+
+    <div class="subtotal cf">
+      <ul>
+        <li class="totalRow"><span class="label">Subtotal</span><span class="value">10,497 Rs/-</span></li>
+
+        <li class="totalRow"><span class="label">Shipping</span><span class="value">0 Rs/-</span></li>
+
+        <li class="totalRow"><span class="label">Tax</span><span class="value">5.00 Rs/-</span></li>
+        <li class="totalRow final"><span class="label">Total</span><span class="value">10,547 Rs/-</span></li>
+        <li class="totalRow"><a href="#" class="btn1 continue">Checkout</a></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -231,9 +274,11 @@
 
 
 
-
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="cart.js"></script>
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
   </body>
 </html>
