@@ -161,10 +161,10 @@ function displayCart() {
     var output = "";
     for (var i in cartArray) {
         output += 
-        "<li class='items'>" +
+        "<div class='items'>" +
             "<div class='infoWrap'>" +
                 " <div class='cartSection'>" +
-                    "<h3>" + cartArray[i].name + "</h3>" +
+                    "<h6>" + cartArray[i].name + "</h6>" +
 
                     "<button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>&nbsp;"
                     + "<input type='number' style='width:60px' class='item-count' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
@@ -180,7 +180,7 @@ function displayCart() {
                     "<button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">Remove</button>" +
                 "</div>" +
             "</div>" +
-        "</li>";
+        "</div>";
     }
     $('.show-cart').html(output);
     $('.total-cart').html(shoppingCart.totalCart());
