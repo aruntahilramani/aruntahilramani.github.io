@@ -5,10 +5,12 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link href="styles.css" rel="stylesheet">
   <title>Healthcare and Medical Device Shopping </title>
 
@@ -52,21 +54,21 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
       <div>
-        <ul class="mt-3">
-          <li class="cart">
-            <a href="addtocart.html" class="btn btn-primary ml-2 my-2 my-sm-0" role="button" type="submit">
-              <ion-icon name="basket"></ion-icon>Cart(<span>0</span>)
-            </a>
-          </li>
-        </ul>
+        <div class="ml-2">
+            
+            <a href="addtocart.html"><button type="button" class="btn btn-primary"><ion-icon name="basket"></ion-icon>Cart (<span
+              class="total-count"></span>)</button></a>
+              &nbsp;
+            <button class="clear-cart btn btn-danger">Clear Cart</button>
+          
+          </div>
       </div>
     </div>
     </div>
   </nav>
 
   <center>
-    <p style="color:red;">Products can be added to cart and count will be incremented and the product details which are
-      in cart can be seen in console, later will add in official cart page. </p>
+    <p style="color:red;">Products can be added to cart and count will be incremented and will be seen in the NAV BAR and Clicking on the Cart button will redired to addtocart.html and from there final checkout can be done by clicking the checkout button.</p>
   </center>
   <div>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -113,11 +115,10 @@
 
       <div class="card-body col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">`
         <img src='pictures/oxy1000b_2.png' class="card-img-top" alt="...">
-        <h5 class="card-title" id="#">Fingertip Pulse Oximeter – Oxygize</h5>
-        <h6 class="card-title">Price: <span id="pricepr{{i.id}}">2,499</span></h6>
+        <h5 class="card-title">Fingertip Pulse Oximeter – Oxygize</h5>
+        <h6 class="card-title">Price: 2,499</span></h6>
         <div>
-          <a href="#" class="add-cart cart1"><button id="#" class="btn btn-primary">Add to
-              Cart</button></a>
+          <a href="#" data-name="Fingertip_Pulse_Oximeter_Oxygize" data-price="2499" class="add-to-cart btn btn-primary">Add to Cart</a>
           <a href="quickview.html"><button id="#" class="my-1 btn btn-primary">QuickView</button></a>
         </div>
       </div>
@@ -125,25 +126,22 @@
         <img
           src='https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/p/o/power_wheelchair_zip_lite_-_vissco_2974.webp'
           class="card-img-top" alt="...">
-        <h5 class="card-title" id="#">Power Wheelchair Zip Lite - Vissco</h5>
-        <h6 class="card-title">Price: <span id="pricepr{{i.id}}">5,000</span></h6>
+        <h5 class="card-title">Power Wheelchair Zip Lite - Vissco</h5>
+        <h6 class="card-title">Price: 5,000</span></h6>
         <div>
-          <a href="#" class="add-cart cart2"><button id="#" class="btn btn-primary">Add to
-              Cart</button></a>
+          <a href="#" data-name="Power_Wheelchair_Zip_Lite_Vissco" data-price="5000" class="add-to-cart btn btn-primary">Add to Cart</a>
           <a href="quickview.html"><button id="#" class="my-1 btn btn-primary">QuickView</button></a>
         </div>
-
       </div>
 
       <div class="card-body col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">`
         <img
           src='https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/m/c/mcp_jindal_economy_ms_coating_foldable_walker_sen468-mcp-j-10_1_.webp'
           class="card-img-top" alt="...">
-        <h5 class="card-title" id="#">Foldable Walker - MCP Lite Visco</h5>
-        <h6 class="card-title">Price: <span id="pricepr{{i.id}}">899</span></h6>
+        <h5 class="card-title">Foldable Walker - MCP Lite Visco</h5>
+        <h6 class="card-title">Price: 899</span></h6>
         <div>
-          <a href="#" class="add-cart cart3"><button id="#" class="btn btn-primary">Add to
-              Cart</button></a>
+          <a href="#" data-name="Foldable_Walker_MCP_Lite_Visco" data-price="899" class="add-to-cart btn btn-primary">Add to Cart</a>
           <a href="quickview.html"><button id="#" class="my-1 btn btn-primary">QuickView</button></a>
         </div>
       </div>
@@ -152,19 +150,19 @@
         <img
           src='https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/s/a/sahyog_wellness_automatic_wrist_digital_sen500-a2012_2_.webp'
           class="card-img-top" alt="...">
-        <h5 class="card-title" id="#">Omron Blood Pressure Monitor</h5>
-        <h6 class="card-title">Price: <span id="pricepr{{i.id}}">2,099</span></h6>
+        <h5 class="card-title">Omron Blood Pressure Monitor</h5>
+        <h6 class="card-title">Price: 2,099</span></h6>
         <div>
-          <a href="#" class="add-cart cart4"><button id="#" class="btn btn-primary">Add to
-              Cart</button></a>
+          <a href="#" data-name="Omron_Blood_Pressure_Monitor" data-price="2099" class="add-to-cart btn btn-primary">Add to Cart</a>
           <a href="quickview.html"><button id="#" class="my-1 btn btn-primary">QuickView</button></a>
         </div>
       </div>
+
     </div>
   </div>
 
-
-  <script src="cart.js"></script>
+  
+  <script src="addtocart2.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>

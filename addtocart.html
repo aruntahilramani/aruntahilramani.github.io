@@ -1,283 +1,131 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    
-  
-  
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Healthcare and Medical Device Shopping </title>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-	
-  </head>
-  <body>
+
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Healthcare and Medical Device Shopping </title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
   <!-- Image and text -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
-  <a class="navbar-brand" href="index.html" style="color:white">Healthcare Device</a>
-  <button class="navbar-toggler" type="button" style="border-color:white;" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" style="color:white;"></span>
-  </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+    <a class="navbar-brand" href="index.html" style="color:white">Healthcare Device</a>
+    <button class="navbar-toggler" type="button" style="border-color:white;" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color:white;"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html" style="color:white">Home <span class="sr-only">(current)</span></a>
-      </li>
-	  <li class="nav-item active">
-        <a class="nav-link" href="tracker.html" style="color:white">Tracker</a>
-      </li>
-      
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" style="color:white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Shop
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#" >Category 1</a>
-          <a class="dropdown-item" href="#" >Category 2</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" >Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-	<div>
-	 <button class="btn btn-primary ml-2 my-2 my-sm-0" data-toggle="modal" data-target="#loginmodal" type="submit">Login</button>
-	 <button class="btn btn-primary my-2 ml-1 my-sm-0" data-toggle="modal" data-target="#signupmodal" type="submit">Register</button>
-	</div>
-  </div>
-  
-  <div class="modal fade" id="signupmodal" tabindex="-1" role="dialog" aria-labelledby="signupmodal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="signupmodaltitle">Signup Here</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form action="/signup" method="POST">
-            <div class="form-group">
-              <label for="uname">Username</label>
-              <input type="text" name="uname" class="form-control" id="uname" placeholder="Choose your Username" required>
-            </div>
-            <div class="form-group">
-              <label for="fname">Firstname</label>
-              <input type="text" name="fname" class="form-control" id="fname" placeholder="Enter your Firstname" required>
-            </div>
-            <div class="form-group">
-              <label for="lname">Lastname</label>
-              <input type="text" name="lname" class="form-control" id="lname" placeholder="Enter your Lastname" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" name="email" class="form-control" id="email" placeholder="Enter your Email" required>
-            </div>
-            <div class="form-group">
-              <label for="pass1">Password</label>
-              <input type="password" name="pass1" class="form-control" id="pass1" placeholder="Choose your Password" required>
-            </div>
-            <div class="form-group">
-              <label for="pass2">Confirm Password</label>
-              <input type="password" name="pass2" class="form-control" id="pass2" placeholder="Confirm your Password" required>
-            </div>
-            
-          <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-        <div class="modal-footer">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html" style="color:white">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="tracker.html" style="color:white">Tracker</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="color:white" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Shop
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Category 1</a>
+            <a class="dropdown-item" href="#">Category 2</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <div>
+        <div class="ml-2">
+          <!-- <a href="addtocart.html" class="btn btn-primary ml-2 my-2 my-sm-0" role="button" type="submit">
+              <ion-icon name="basket"></ion-icon>Cart(<span>0</span>)
+            </a> -->
+            <a href="#"><button type="button" class="btn btn-primary"><ion-icon name="basket"></ion-icon>Cart (<span
+              class="total-count"></span>)</button></a>
+          &nbsp;
+          <button class="clear-cart btn btn-danger">Clear Cart</button>
+
         </div>
       </div>
     </div>
-  </div>
+    </div>
+  </nav>
 
-  <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="loginmodal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="loginmodaltitle">Login Here</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form action="/login" method="POST">
-            <div class="form-group">
-              <label for="username">Username:</label>
-              <input type="text" name="loginusername" class="form-control" id="loginusername" placeholder="Enter your Username" required>
-            </div>
-            <div class="form-group">
-              <label for="password">Password:</label>
-              <input type="password" name="loginpassword" class="form-control" id="loginpassword" placeholder="Enter your Password">
-            </div>
-            
-          <button type="submit" name="submit" class="btn btn-primary">Login</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-        <a href="#" role="button" class="btn btn-primary">Forgot Password?</a>
-        </div>
+
+
+
+  <section class="cart_area">
+    <div class="wrap cf">
+      <div class="heading cf">
+        <h1>My Cart</h1>
+        <a href="#" class="continue">Continue Shopping</a>
       </div>
-    </div>
-  </div>
- </nav> 
-
-
-
-
-<section class="cart_area">
-  <div class="wrap cf">
-    <div class="heading cf">
-      <h1>My Cart</h1>
-      <a href="#" class="continue">Continue Shopping</a>
-    </div>
-    <div class="cart">
-      <!--    <ul class="tableHead">
+      <div class="cart">
+        <!--    <ul class="tableHead">
       <li class="prodHeader">Product</li>
       <li>Quantity</li>
       <li>Total</li>
        <li>Remove</li>
     </ul>-->
-      <ul class="cartWrap">
-        <li class="items odd">
+        <ul class="show-cart">
+          
+       
+     
 
-          <div class="infoWrap">
-            <div class="cartSection">
+        </ul>
+      </div>
 
-              <img src="pictures/oxy1000b_2.png" alt="" class="itemImg" />
-              <p class="itemNumber">#QUE-007544-002</p>
-              <h3>Fingertip Pulse Oximeter – Oxygize</h3>
+      <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo"
+          placholder="Enter Code" />
+        <a href="#" class="btn1"></a></div>
 
-              <p> <input type="text" name="qty" class="qty" placeholder="1" /> x 2,499 Rs/-</p>
+      <div class="subtotal cf">
+        <ul>
+          <!-- <li class="totalRow"><span class="label">Subtotal</span><span class="value">10,497 Rs/-</span></li>
 
-              <p class="stockStatus"> In Stock</p>
-              
-            </div>
-            <div class="prodTotal cartSection">
-              <p>2,499 Rs/-</p>
-            </div>
-            <div class="cartSection">
-              <a href="#" role="button" class="removeWrap btn btn-outline-danger mb-3">Remove</a>
-            </div>
-          </div>
-        </li>
-        <li class="items even">
+          <li class="totalRow"><span class="label">Shipping</span><span class="value">0 Rs/-</span></li>
 
-          <div class="infoWrap">
-            <div class="cartSection">
-
-              <img src="https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/p/o/power_wheelchair_zip_lite_-_vissco_2974.webp" alt="" class="itemImg" />
-              <p class="itemNumber">#QUE-007544-003</p>
-              <h3>Power Wheelchair Zip Lite - Vissco</h3>
-
-              <p> <input type="text" name="qty" class="qty" placeholder="1" /> x 5,000 Rs/-</p>
-
-              <p class="stockStatus"> In Stock</p>
-            </div>
-
-
-            <div class="prodTotal cartSection">
-              <p>5,000 Rs/-</p>
-            </div>
-            <div class="cartSection">
-              <a href="#" role="button" class="removeWrap btn btn-outline-danger mb-3">Remove</a>
-            </div>
-          </div>
-        </li>
-
-        <li class="items odd">
-          <div class="infoWrap">
-            <div class="cartSection">
-
-              <img src="https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/m/c/mcp_jindal_economy_ms_coating_foldable_walker_sen468-mcp-j-10_1_.webp" alt="" class="itemImg" />
-              <p class="itemNumber">#QUE-007544-004</p>
-              <h3>Foldable Walker - MCP Lite Visco</h3>
-
-              <p> <input type="text" class="qty" placeholder="1" /> x 899 Rs/-</p>
-
-              <p class="stockStatus out"> Out of Stock</p>
-            </div>
-
-
-            <div class="prodTotal cartSection">
-              <p>899 Rs/-</p>
-            </div>
-            <div class="cartSection">
-              <a href="#" role="button" class="removeWrap btn btn-outline-danger mb-3">Remove</a>
-            </div>
-          </div>
-        </li>
-
-        <li class="items even">
-          <div class="infoWrap">
-            <div class="cartSection info">
-
-              <img src="https://assets.seniority.in/media/amasty/webp/catalog/product/cache/9d91e481b384190d8e5afcec052c0adf/s/a/sahyog_wellness_automatic_wrist_digital_sen500-a2012_2_.webp" alt="" class="itemImg" />
-              <p class="itemNumber">#QUE-007544-004</p>
-              <h3>Omron Blood Pressure Monitor</h3>
-
-              <p> <input type="text" class="qty" placeholder="1" /> x 2,099 Rs/-</p>
-
-              <p class="stockStatus"> In Stock</p>
-
-            </div>
-
-
-            <div class="prodTotal cartSection">
-              <p>2,099 Rs/-</p>
-            </div>
-
-            <div class="cartSection">
-              <a href="#" role="button" class="removeWrap btn btn-outline-danger mb-3">Remove</a>
-            </div>
-          </div>
-          <div class="special">
-            <div class="specialContent">Free gift with purchase!, gift wrap, etc!!</div>
-          </div>
-        </li>
-
-
-        <!--<li class="items even">Item 2</li>-->
-
-      </ul>
+          <li class="totalRow"><span class="label">Tax</span><span class="value">5.00 Rs/-</span></li> -->
+          <li class="totalRow final"><span class="label">Total</span><span class="total-cart"></span> Rs/-</li>
+          <li class="totalRow"><a href="checkout.html" class="btn1 continue">Checkout</a></li>
+        </ul>
+      </div>
     </div>
-
-    <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo"
-        placholder="Enter Code" />
-      <a href="#" class="btn1"></a></div>
-
-    <div class="subtotal cf">
-      <ul>
-        <li class="totalRow"><span class="label">Subtotal</span><span class="value">10,497 Rs/-</span></li>
-
-        <li class="totalRow"><span class="label">Shipping</span><span class="value">0 Rs/-</span></li>
-
-        <li class="totalRow"><span class="label">Tax</span><span class="value">5.00 Rs/-</span></li>
-        <li class="totalRow final"><span class="label">Total</span><span class="value">10,547 Rs/-</span></li>
-        <li class="totalRow"><a href="#" class="btn1 continue">Checkout</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
 
+  <script src="addtocart2.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
 
-
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-  <script src="cart2.js"></script>
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-  </body>
 </html>
